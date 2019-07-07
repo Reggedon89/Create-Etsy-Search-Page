@@ -1,14 +1,13 @@
 function makeItem(placeholder) {
     return `
         <div class="placeholder">
-            <img src="${placeholder.img}" alt="" />
+            <a href="${placeholder.url}"><img src="${placeholder.img}" alt="" /></a>
               <p class="title">${placeholder.title}</p>
               <p class="seller">${placeholder.seller}</p>
-              <p class="price">${placeholder.price}</p>
+              <p class="price">$${placeholder.price}</p>
               </div>
     `
 }
-
 
 let html5 = ''
 
@@ -17,17 +16,41 @@ items.results.forEach( placeholder => {
         img: placeholder.Images[0].url_170x135,
         title: placeholder.title,
         seller: placeholder.Shop.shop_name,
-        price: placeholder.price
+        price: placeholder.price,
+        url: placeholder.url
     })
 })
 
 document.querySelector("#itemList").innerHTML = html5
 
+//places the tags into the tag bar
+
+function tagBar(tagItem) {
+
+    return `
+           <div class="tagp>
+           <p> ${tagItem.tag}</p>
+           </div>
+    `
+}
+
+let tagStr = ''
+
+items.results.forEach(tagItem => {
+    
+        tagStr += tagBar({
+            tag : tagItem.tags[0]
+        })
+
+})
+
+document.querySelector("#tag-bar").innerHTML = tagStr
+
 //Toggle the show more show less lists
 
 function toggle() {
-    let x = document.getElementById("showMore")
-    let y = document.getElementById("expand")
+    let x = document.getElementsByClassName("showMore")[0]
+    let y = document.getElementsByClassName("showButton")[0]
     if (x.style.display === "none") {
         x.style.display = "block"
         y.style.display = "none"
@@ -36,6 +59,20 @@ function toggle() {
         y.style.display = "block"
     }
 }
+
+function toggle2() {
+    let x = document.getElementById("showMore2")
+    let y = document.getElementsByClassName("showButton2")[0]
+    if (x.style.display === "none") {
+        x.style.display = "block"
+        y.style.display = "none"
+    } else {
+        x.style.display = "none"
+        y.style.display = "block"
+    }
+}
+
+
 
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
