@@ -14,7 +14,9 @@ html {
   display: flex;
   flex-direction: column;
 }
-
+h4 {
+  padding-left: 10px;
+}
 body {
 }
 
@@ -191,7 +193,7 @@ a:link {
 #main-nav a:hover {
   border-bottom: 1px solid black;
   padding-bottom: 13px;
-  transition: 0.5s;
+  transition: 0.1s;
   z-index: 1;
 }
 
@@ -231,9 +233,87 @@ aside {
   flex-direction: column;
   background: red;
   min-height: 500px;
-  width: 300px;
+  width: 290px;
 }
 
+/* Special offers checkbox */
+
+#special-offers {
+  text-align: left;
+}
+#special-offers h4 {
+  margin-bottom: -10px;
+}
+
+#special-offers label {
+  font-size: 12px;
+}
+
+fieldset {
+  border: none;
+}
+/* This styles the catogories in the side bar */
+#categories {
+  text-align: left;
+}
+#categories h4 {
+  margin-bottom: -15px;
+}
+#categories ul {
+  list-style: none;
+}
+
+#showMore {
+  display: none;
+}
+#categories li {
+  margin-bottom: 5px;
+}
+#categories a:hover {
+  border-bottom: 1px solid black;
+  padding-bottom: 0px;
+}
+
+#categories ul li a:visited,
+a:link {
+  text-decoration: none;
+  color: white;
+}
+/* This is to style the shipping options */
+
+#shipping {
+  display: flex;
+  flex-direction: column;
+}
+
+#shipping h4 {
+  margin-bottom: -15px;
+}
+
+#shipping form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="checkbox"] {
+  border: 1px solid grey;
+  height: 16px;
+  width: 16px;
+}
+
+#shipping label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+label:hover {
+  border-bottom: 1px solid black;
+  padding-bottom: 0px;
+}
+#shipping li {
+  list-style: none;
+  margin-left: -30px;
+}
+
+/* This is for the footer */
 footer {
   display: flex;
   background: green;

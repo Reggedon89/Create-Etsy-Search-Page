@@ -23,3 +23,21 @@ items.results.forEach( placeholder => {
 
 document.querySelector("#itemList").innerHTML = html5
 
+//Toggle the show more show less lists
+
+function toggle() {
+    let x = document.getElementById("showMore")
+    let y = document.getElementById("expand")
+    if (x.style.display === "none") {
+        x.style.display = "block"
+        y.style.display = "none"
+    } else {
+        x.style.display = "none"
+        y.style.display = "block"
+    }
+}
+
+if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+
