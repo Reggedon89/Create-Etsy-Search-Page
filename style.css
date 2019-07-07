@@ -44,6 +44,10 @@ main img {
   width: 200px;
 }
 
+#showMore {
+  display: none;
+}
+
 main .placeholder {
   margin: 10px;
 }
@@ -263,9 +267,6 @@ fieldset {
   list-style: none;
 }
 
-#showMore {
-  display: none;
-}
 #categories li {
   margin-bottom: 5px;
 }
@@ -279,6 +280,23 @@ a:link {
   text-decoration: none;
   color: white;
 }
+
+#expand {
+  padding: 15px 32px;
+  border-radius: 30px;
+  margin-right: 10px;
+  border: none;
+  font-size: 14px;
+}
+#expand:hover {
+  background-color: grey;
+  transition: 0.1s;
+}
+#expand i {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
 /* This is to style the shipping options */
 
 #shipping {
