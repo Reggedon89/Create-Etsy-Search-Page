@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/small-etsy.png" type="image/x-icon">
+    <title>Etsy Clone</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/599a7e9beb.js"></script>
 
   </head>
   <body >
-    <div id="container" onclick="normalize()">
+    <div id="container" >
       <header>
           <!-- Outer div for logo and search -->
         <div id="logo-wrapper">
@@ -20,7 +21,7 @@
             
               <form action="" method="POST">
                   <input type="input" name="search" id="search" onclick="blackGround()">
-                  <button type="reset" id="reset"><i class="fas fa-times"></i>
+                  <button type="reset" id="reset"><i class="fas fa-times" onclick="blackGround()"></i>
                   </button>
                   <button type="submit" id="submit"><i class="fas fa-search"></i>
                   </button>

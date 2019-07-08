@@ -87,11 +87,17 @@ function toggle2() {
 function blackGround() {
     let x = document.getElementById("search")
     let y = document.getElementById("submit")
+    let z = document.getElementById("reset")
     if (document.activeElement === x) {
         m = y.style.backgroundColor="black"
         n = y.style.color= "white"
         return  m + n
-    } 
+    } else if(document.activeElement == z){
+        m  = y.style.backgroundColor = "rgb(239, 239, 239)"
+        n = y.style.color = "black"
+        w = x.value = ''
+        return m+n +w
+    }
 }
 
 
