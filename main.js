@@ -83,6 +83,16 @@ function toggle2() {
         y.style.display = "block"
     }
 }
+//This changes the search icon when clicked
+function blackGround() {
+    let x = document.getElementById("search")
+    let y = document.getElementById("submit")
+    if (document.activeElement === x) {
+        m = y.style.backgroundColor="black"
+        n = y.style.color= "white"
+        return  m + n
+    } 
+}
 
 
 

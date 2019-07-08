@@ -9,8 +9,8 @@
     <script src="https://kit.fontawesome.com/599a7e9beb.js"></script>
 
   </head>
-  <body>
-    <div id="container">
+  <body >
+    <div id="container" onclick="normalize()">
       <header>
           <!-- Outer div for logo and search -->
         <div id="logo-wrapper">
@@ -19,7 +19,7 @@
           <div id="searchBar">
             
               <form action="" method="POST">
-                  <input type="input" name="search" id="search">
+                  <input type="input" name="search" id="search" onclick="blackGround()">
                   <button type="reset" id="reset"><i class="fas fa-times"></i>
                   </button>
                   <button type="submit" id="submit"><i class="fas fa-search"></i>
@@ -113,9 +113,9 @@
             <form action="" method="get">
               <ul>
                 <fieldset>
-                <li><input type="radio" name="anywhere" id="anywhere"><label for="anywhere">Anywhere</label></li>
-                <li><input type="radio" name="states" id="states"><label for="states">United States</label></li>
-                <li><input type="radio" name="canada" id="canada"><label for=:canada>Canada</label></li>
+                <li><input type="radio" name="country" id="anywhere"><label for="anywhere">Anywhere</label></li>
+                <li><input type="radio" name="country" id="states"><label for="states">United States</label></li>
+                <li><input type="radio" name="country" id="canada"><label for=:canada>Canada</label></li>
                 <ul>
                   <li><input type="text" name="searchLocation" id="searchLocation" placeholder="Enter Location"></i><button><i class="fas fa-chevron-right"></i></button></li>
                 </ul>
@@ -129,12 +129,12 @@
             <form action="" method="get">
               <ul>
                 <fieldset>
-                  <li><input type="radio" name="any" id="any"><label for="any">Any Price</label></li>
-                  <li><input type="radio" name="under25" id="under25"><label for="under25">Under $25</label></li>
-                  <li><input type="radio" name="25-50" id="25-50"><label for="25-50">$25 to $100</label></li>
-                  <li><input type="radio" name="50-100" id="50-100"><label for="50-100">$50 to $100</label></li>
-                  <li><input type="radio" name="over100" id="over100"><label for="over100">Over $100</label></li>
-                  <li><input type="radio" name="custom" id="custom"><label for="custom">Custom</label></li>
+                  <li><input type="radio" name="price" id="any"><label for="any">Any Price</label></li>
+                  <li><input type="radio" name="price" id="under25"><label for="under25">Under $25</label></li>
+                  <li><input type="radio" name="price" id="25-50"><label for="25-50">$25 to $100</label></li>
+                  <li><input type="radio" name="price" id="50-100"><label for="50-100">$50 to $100</label></li>
+                  <li><input type="radio" name="price" id="over100"><label for="over100">Over $100</label></li>
+                  <li><input type="radio" name="price" id="custom"><label for="custom">Custom</label></li>
                 <div id="priceRange">
                   <ul>
                     <li><input type="text" name="low" id="low" placeholder="Low"><span> to </span><input type="text" name="high" id="high" placeholder="High"><button><i class="fas fa-chevron-right"></i></button></li>
@@ -150,28 +150,28 @@
             <form action="" method="GET">
               <ul>
                 <fieldset>
-                  <li><input type="radio" name="black" id="black"><label for="black">Black</label></li>
-                  <li><input type="radio" name="white" id="white"><label for="white">White</label></li>
-                  <li><input type="radio" name="green" id="green"><label for="green">Green</label></li>
-                  <li><input type="radio" name="brown" id="brown"><label for="brown">Brown</label></li>
-                  <li><input type="radio" name="red" id="red"><label for="red">Red</label></li>
+                  <li><input type="radio" name="color" id="black"><label for="black">Black</label></li>
+                  <li><input type="radio" name="color" id="white"><label for="white">White</label></li>
+                  <li><input type="radio" name="color" id="green"><label for="green">Green</label></li>
+                  <li><input type="radio" name="color" id="brown"><label for="brown">Brown</label></li>
+                  <li><input type="radio" name="color" id="red"><label for="red">Red</label></li>
                   <button type="button" class="showButton2" onclick="toggle2()"><i class="fas fa-plus"></i>  Show More</button>
                   
                   <div id="showMore2">
-                   <li><input type="radio" name="blue" id="blue"><label for="blue">Blue</label></li>
-                   <li><input type="radio" name="clear" id="clear"><label for="clear">Clear</label></li>
-                   <li><input type="radio" name="gold" id="gold"><label for="gold">Gold</label></li>
-                   <li><input type="radio" name="silver" id="silver"><label for="silver">Silver</label></li>
-                   <li><input type="radio" name="beige" id="beige"><label for="beige">Beige</label></li>
-                   <li><input type="radio" name="yellow" id="yellow"><label for="yellow">Yellow</label></li>
-                   <li><input type="radio" name="gray" id="gray"><label for="gray">Grey</label></li>
-                   <li><input type="radio" name="purple" id="purple"><label for="purple">Purple</label></li>
-                   <li><input type="radio" name="orange" id="orange"><label for="orange">Orange</label></li>
-                   <li><input type="radio" name="pink" id="pink"><label for="pink">Pink</label></li>
-                   <li><input type="radio" name="copper" id="copper"><label for="copper">Copper</label></li>
-                   <li><input type="radio" name="bronze" id="bronze"><label for="bronze">Bronze</label></li>
-                   <li><input type="radio" name="roseGold" id="roseGold"><label for="roseGold">Rose Gold</label></li>
-                   <li><input type="radio" name="rainbow" id="rainbow"><label for="rainbow">Rainbow</label></li>
+                   <li><input type="radio" name="color" id="blue"><label for="blue">Blue</label></li>
+                   <li><input type="radio" name="color" id="clear"><label for="clear">Clear</label></li>
+                   <li><input type="radio" name="color" id="gold"><label for="gold">Gold</label></li>
+                   <li><input type="radio" name="color" id="silver"><label for="silver">Silver</label></li>
+                   <li><input type="radio" name="color" id="beige"><label for="beige">Beige</label></li>
+                   <li><input type="radio" name="color" id="yellow"><label for="yellow">Yellow</label></li>
+                   <li><input type="radio" name="color" id="gray"><label for="gray">Grey</label></li>
+                   <li><input type="radio" name="color" id="purple"><label for="purple">Purple</label></li>
+                   <li><input type="radio" name="color" id="orange"><label for="orange">Orange</label></li>
+                   <li><input type="radio" name="color" id="pink"><label for="pink">Pink</label></li>
+                   <li><input type="radio" name="color" id="copper"><label for="copper">Copper</label></li>
+                   <li><input type="radio" name="color" id="bronze"><label for="bronze">Bronze</label></li>
+                   <li><input type="radio" name="color" id="roseGold"><label for="roseGold">Rose Gold</label></li>
+                   <li><input type="radio" name="color" id="rainbow"><label for="rainbow">Rainbow</label></li>
                    <button type="button" class="showButton2"  onclick="toggle2()"><i class="fas fa-minus"></i>  Show Less</button>
                   
                   
@@ -214,7 +214,53 @@
           </div>
         </main>
       </section>
-      <footer></footer>
+      <footer>
+        <div class="footerList">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Esty Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footerList">
+          <h3>Sell</h3>
+          <ul>
+            <li><a href="#">Sell on Etsy</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Forums</a></li>
+            <li><a href="#">Affiliates</a></li>
+          </ul>
+        </div>
+        <div class="footerList">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">Esty, Inc</a></li>
+            <li><a href="#">Policies</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Impact</a></li>
+          </ul>
+        </div>
+        <div class="footerList">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+          <div id="app">
+              <button type="button"><i class="fab fa-etsy"></i>   Download the Etsy App</button>
+          </div>
+          <div id="social">
+            <div class="icon"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+            <div class="icon"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
+            <div class="icon"><a href="https://pintrest.com" target="_blank"><i class="fab fa-pinterest"></i></a></div>
+            <div class="icon"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
+            <div class="icon"><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></div>
+          </div>
+        </div>
+        
+      </footer>
     </div>
     <script src="items.js"></script>
     <script src="main.js"></script>
