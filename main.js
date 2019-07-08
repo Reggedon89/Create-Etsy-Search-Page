@@ -1,8 +1,19 @@
 function makeItem(placeholder) {
     return `
         <div class="placeholder">
-            <a href="${placeholder.url}"><img src="${placeholder.img}" alt="" /></a>
-              <p class="title">${placeholder.title}</p>
+        <div class="description">
+        <span class="descText">${placeholder.title}</span>
+        
+        
+            <a href="${placeholder.url}" target="_blank">
+            <div class = "heart"> <i class="far fa-heart"></i></div>
+            <img src="${placeholder.img}" alt="" />
+            </a>
+           
+        
+            
+            </div>  
+            <p class="title">${placeholder.title}</p>
               <p class="seller">${placeholder.seller}</p>
               <p class="price">$${placeholder.price}</p>
               </div>
@@ -17,7 +28,8 @@ items.results.forEach( placeholder => {
         title: placeholder.title,
         seller: placeholder.Shop.shop_name,
         price: placeholder.price,
-        url: placeholder.url
+        url: placeholder.url,
+        
     })
 })
 
@@ -39,7 +51,7 @@ let tagStr = ''
 items.results.forEach(tagItem => {
     
         tagStr += tagBar({
-            tag : tagItem.tags[0]
+            tag : tagItem.tags[0, 1, 3 ]
         })
 
 })

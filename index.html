@@ -30,13 +30,11 @@
         <!-- Outer div for register Button -->
         <div id="reg-wrapper">
           <div id="registerButtons">
-              <ul>
-                  <li><a href="#">Sell On Etsy</a></li>
-                  <li><a href="#">Register</a></li>
-                  <li id="signIn"><a href="#">Sign In</a></li>
-                  <li><a href="#">Discover</a></li>
-                  <li><a href="#">Cart</a></li>
-              </ul>
+            <div id="sellEtsy"><a href="#">Sell On Etsy</a></div>
+            <div id="reg"><a href="#">Register</a></div>
+            <div id="signIn"><a href="#">Sign In</a></div>
+            <div id="discover"><a href="#"><div id="imgD"><img src="assets/hamburger.png"></div>Discover</a></div>
+            <div id="cart"><a href="#"><div id="imgC"><img src="assets/cart.png"></div>Cart</a></div>
           </div>
         </div>
           <!-- Nav wrapper div -->
@@ -93,9 +91,9 @@
                  <li><a href="#">Electronics & Accessories</a></li>
                  <li><a href="#">Shoes</a></li>
                  <li><a href="#">Pet Supplies</a></li>
-                 
+                 <button type="button" class="showButton" onclick="toggle()"><i class="fas fa-minus"></i>  Show Less</button>
+
                </ul>
-               <button type="button" class="showButton" onclick="toggle()"><i class="fas fa-minus"></i>  Show Less</button>
             </div>
           </div>
           <div id="shipping">
@@ -212,6 +210,7 @@
         </aside>
 
         <main id="itemList">
+           
           </div>
         </main>
       </section>
